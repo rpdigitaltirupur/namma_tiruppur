@@ -1,0 +1,22 @@
+{
+  "languages": [
+    {
+      "value": "ta",
+      "icon": "த",
+      "name": "தமிழ்",
+      "title": "நம்ம திருப்பூர்",
+      "subTitle": "வந்தாரை வாழவைக்கும் ஊரு",
+      "langUri": "&lang=ta",
+      "font": "ta-font"
+    },
+    {
+      "value": "en",
+      "icon": "En",
+      "name": "ENGLISH",
+      "title": "Namma Tiruppur",
+      "subTitle": "Whoever comes, always welcome",
+      "langUri": "",
+      "font": "en-font"
+    }
+  ]
+}

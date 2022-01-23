@@ -1,0 +1,209 @@
+@import "../styles/color";
+
+//TOP
+.top-right-icon-list {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.top-right-icon-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: $color-white;
+}
+.top-right-icon-list ul > li {
+  height: 40px;
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  align-items: center;
+}
+.top-right-icon-list ul > li:hover {
+  color: $color-black;
+  background-color: $color-theme;
+  cursor: pointer;
+}
+.top-right-icon-language {
+  position: relative;
+}
+
+.top-right-icon-language:hover .top-right-icon-language-list {
+  display: block !important;
+}
+.top-right-icon-language-list {
+  display: none !important;
+  list-style: none;
+  padding-left: 0;
+  position: absolute;
+  top: 100%;
+  width: 150px;
+  right: 0;
+  font-weight: bold;
+  border-radius: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  transition: all 0.5s ease-in;
+  text-align: center;
+  color: $color-black !important;
+}
+.top-right-icon-language-list li {
+  justify-content: center;
+}
+.top-left-climate-list {
+  display: flex;
+  flex-direction: row;
+}
+.top-left-climate-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+.top-left-climate-list ul > li {
+  color: $color-white;
+}
+.top-left-climate-list ul > li > i {
+  padding: 0px 15px 0px 15px;
+  line-height: 40px;
+}
+
+//HEADER
+.header {
+  background-color: $color-white;
+  box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+  -webkit-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+  -moz-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+  z-index: 5;
+}
+.header .header-banner {
+  display: flex;
+  align-items: center;
+}
+.header .header-banner img {
+  width: 230px;
+  height: 110px;
+  margin-left: 20px;
+}
+
+//MENU
+.navigation {
+  background-color: $color-white !important;
+  border-top: 1px solid rgba(0, 0, 0, 10%);
+  border-bottom: 1px solid rgba(0, 0, 0, 10%);
+}
+.menu {
+  height: 48px;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 56px;
+  display: inline-flex;
+  margin-top: -4px;
+}
+.menu ul li {
+  color: $color-black;
+  height: 56px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+.menu ul li:hover a {
+  border-bottom: 3px solid $color-theme;
+  color: $color-theme;
+}
+.menu ul li a {
+  background-color: $color-white;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  -webkit-box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+    0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+  box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+    0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+}
+
+.menu ul li ul {
+  position: absolute;
+  top: 108%;
+  z-index: 99999;
+  padding-left: 0;
+  display: none !important;
+}
+
+.menu ul li:hover > ul {
+  display: block !important;
+}
+
+.menu ul li ul li,
+.menu ul li ul li a {
+  width: 280px;
+}
+
+.menu ul li ul li a span {
+  width: 230px;
+}
+
+.menu ul li ul li a {
+  box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+    0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+  -webkit-box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+    0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+}
+
+.menu ul li ul li ul {
+  position: absolute;
+  z-index: 999999;
+  padding-left: 0;
+  left: 100%;
+  top: 7%;
+  display: none;
+}
+
+.menu ul li ul li:hover ul {
+  display: block !important;
+}
+
+//CAROUSEL
+.carousel .prev,
+.carousel .next {
+  height: 400px;
+  width: 50px;
+  position: absolute;
+}
+
+.carousel .main {
+  height: 400px;
+  width: 100%;
+  background-image: url("../assets/images/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel .slider {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+}
+
+.carousel .prev {
+  left: 0;
+}
+
+.carousel .next {
+  right: 0;
+}
+
+.carousel .slider {
+  bottom: 0;
+}
+
+.carousel .prev:hover,
+.carousel .next:hover {
+  background-color: rgba(0, 0, 0, 30%);
+}

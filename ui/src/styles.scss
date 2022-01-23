@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/bootstrap4-light-blue/theme.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url("styles/_align-items.scss");
+@import url("styles/_bg-color.scss");
+@import url("styles/_border.scss");
+@import url("styles/_color.scss");
+@import url("styles/_display.scss");
+@import url("styles/_font-size.scss");
+@import url("styles/_font-weight.scss");
+@import url("styles/_height.scss");
+@import url("styles/_justify-content.scss");
+@import url("styles/_line-height.scss");
+@import url("styles/_opacity.scss");
+@import url("styles/_padding.scss");
+@import url("styles/_position.scss");
+@import url("styles/_text-align.scss");
+@import url("styles/_text-transform.scss");
+@import url("styles/_visibility.scss");
+@import url("styles/_width.scss");
+
+body {
+  background-color: #dddddd;
+}
+.en-font-1 {
+  font-family: "Open Sans", sans-serif;
+}
+.en-font {
+  font-family: "Oswald", sans-serif;
+}
+.ta-font-1 {
+  font-family: "Meera Inimai", sans-serif;
+}
+.ta-font {
+  font-family: "Mukta Malar", sans-serif;
+}
+.p-tooltip {
+  font-family: "Oswald", sans-serif;
+}
+.p-tooltip-arrow {
+  border-left-color: #ffffff !important;
+  border-right-color: #ffffff !important;
+}
+.p-tooltip-text {
+  color: #1b9bff !important;
+  font-weight: bold;
+  background-color: #ffffff !important;
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+}

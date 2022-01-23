@@ -1,0 +1,30 @@
+{
+  "menuList": [
+    {
+      "name": "Home",
+      "routeUrl": "/",
+      "children": [
+        {
+          "name": "History",
+          "routeUrl": "/history",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Gallery",
+      "routeUrl": "/",
+      "children": []
+    },
+    {
+      "name": "About",
+      "routeUrl": "/",
+      "children": []
+    },
+    {
+      "name": "Contact",
+      "routeUrl": "/",
+      "children": []
+    }
+  ]
+}
