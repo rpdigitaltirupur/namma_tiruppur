@@ -9,9 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { OutsideClickDirective } from './shared/directives/outside-click.directive';
 import {TooltipModule} from 'primeng/tooltip';
+import { CarouselComponent } from './shared/components/carousel/carousel.component';
 
 @NgModule({
-  declarations: [AppComponent, OutsideClickDirective],
+  declarations: [AppComponent, OutsideClickDirective, CarouselComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@use "global/variables";
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import "~primeng/resources/primeng.min.css";
@@ -8,27 +8,190 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
-@import url("styles/_align-items.scss");
-@import url("styles/_bg-color.scss");
-@import url("styles/_border.scss");
-@import url("styles/_color.scss");
-@import url("styles/_display.scss");
-@import url("styles/_font-size.scss");
-@import url("styles/_font-weight.scss");
-@import url("styles/_height.scss");
-@import url("styles/_justify-content.scss");
-@import url("styles/_line-height.scss");
-@import url("styles/_opacity.scss");
-@import url("styles/_padding.scss");
-@import url("styles/_position.scss");
-@import url("styles/_text-align.scss");
-@import url("styles/_text-transform.scss");
-@import url("styles/_visibility.scss");
-@import url("styles/_width.scss");
 
 body {
-  background-color: #dddddd;
+  background-color: variables.$color-alto !important;
 }
+
+//Align Items
+.align-items-center {
+  align-items: center !important;
+}
+
+//Background Color
+.bg-color-white {
+  background-color: variables.$color-white !important;
+}
+.bg-color-black {
+  background-color: variables.$color-black !important;
+}
+.bg-color-anti-flash-white {
+  background-color: variables.$color-anti-flash-white !important;
+}
+.bg-color-theme {
+  background-color: variables.$color-theme !important;
+}
+
+//Border
+.border-1px-solid {
+  border: 1px solid rgba(0, 0, 0, 0.17);
+}
+.border-bottom-3px-solid-1b9bff {
+  border-bottom: 3px solid variables.$color-theme;
+}
+
+//Color
+.color-dodger-blue {
+  color: variables.$color-dodger-blue !important;
+}
+.color-white {
+  color: variables.$color-white !important;
+}
+.color-black {
+  color: variables.$color-black !important;
+}
+.color-gallery {
+  color: variables.$color-gallery !important;
+}
+.color-anti-flash-white {
+  color: variables.$color-anti-flash-white !important;
+}
+.color-theme {
+  color: variables.$color-theme !important;
+}
+
+//Display
+.display-flex {
+  display: flex !important;
+}
+.display-none {
+  display: none !important;
+}
+
+//Font Size
+.f-size-1rem {
+  font-size: 1rem !important;
+}
+
+.f-size-1-1rem {
+  font-size: 1.1rem !important;
+}
+
+.f-size-1-2rem {
+  font-size: 1.2rem !important;
+}
+
+.f-size-1-5rem {
+  font-size: 1.5rem !important;
+}
+
+.f-size-2-5rem {
+  font-size: 2.5rem !important;
+}
+
+//Font Weight
+.f-weight-bold {
+  font-weight: bold !important;
+}
+
+//Height
+.h-10px {
+  height: 10px !important;
+}
+.h-20px {
+  height: 20px !important;
+}
+.h-40px {
+  height: 40px !important;
+}
+.h-50px {
+  height: 50px !important;
+}
+.h-100px {
+  height: 100px !important;
+}
+.h-120px {
+  height: 120px !important;
+}
+.h-400px {
+  height: 400px !important;
+}
+
+//Justify Content
+.justify-content-center {
+  justify-content: center !important;
+}
+
+//Line Height
+.lh-40px {
+  line-height: 40px !important;
+}
+
+//Opacity
+.opacity-1 {
+  opacity: 1 !important;
+}
+
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+//Padding
+.pl-15px {
+  padding-left: 15px !important;
+}
+
+.pr-15px {
+  padding-right: 15px !important;
+}
+
+.pl-30px {
+  padding-left: 30px !important;
+}
+
+.pr-30px {
+  padding-right: 30px !important;
+}
+
+//Position
+.position-absolute {
+  position: absolute !important;
+}
+
+//Text Align
+.text-align-center {
+  text-align: center !important;
+}
+
+//Text Transform
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+//Visibility
+.visibility-visible {
+  visibility: visible !important;
+}
+
+.visibility-hidden {
+  visibility: hidden !important;
+}
+
+//Width
+.w-46px {
+  width: 46px !important;
+}
+.w-50px {
+  width: 50px !important;
+}
+.w-100px {
+  width: 100px !important;
+}
+.w-100per {
+  width: 100% !important;
+}
+
+//General
 .en-font-1 {
   font-family: "Open Sans", sans-serif;
 }
@@ -45,13 +208,13 @@ body {
   font-family: "Oswald", sans-serif;
 }
 .p-tooltip-arrow {
-  border-left-color: #ffffff !important;
-  border-right-color: #ffffff !important;
+  border-left-color: variables.$color-white !important;
+  border-right-color: variables.$color-white !important;
 }
 .p-tooltip-text {
-  color: #1b9bff !important;
+  color: variables.$color-theme !important;
   font-weight: bold;
-  background-color: #ffffff !important;
+  background-color: variables.$color-white !important;
   padding-top: 0.2rem !important;
   padding-bottom: 0.2rem !important;
 }

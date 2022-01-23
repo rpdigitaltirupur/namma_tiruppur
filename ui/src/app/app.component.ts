@@ -11,6 +11,7 @@ import { interval, Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import language from '../assets/files/json/lang.json';
 import menu from '../assets/files/json/menu.json';
+import image from '../assets/files/json/image.json';
 import { ILanguage } from './core/models/common/Language';
 import { IMenu } from './core/models/common/Menu';
 import {
@@ -22,6 +23,7 @@ import {
   MonthInWords,
 } from './core/models/common/Climate';
 import { HttpService } from './core/services/common/http-service.service';
+import { ICarousel } from './core/models/common/Carousel';
 
 @Component({
   selector: 'app-root',
@@ -40,6 +42,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   climate: IClimate | undefined;
   dateTime: IDateTime | undefined;
   leftListSliding: boolean[] = [false, true, true, true, true, true, true];
+  imageList!: ICarousel[];
   constructor(
     public translateService: TranslateService,
     public title: Title,
@@ -59,6 +62,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       this.processLeftListSliding();
     });
     this.navList = menu.menuList;
+    this.imageList = image.imageList;
   }
   ngOnDestroy(): void {
     this.subscriptionOneSecond.unsubscribe();

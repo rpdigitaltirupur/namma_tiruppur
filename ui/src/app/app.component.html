@@ -59,15 +59,18 @@
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 ps-3 pe-3 color-white menu">
       <ul class="en-font f-weight-bold f-size-1-2rem">
         <li *ngFor="let nav of navList">
-          <a><span>{{nav.name}}</span><i *ngIf="nav.children.length > 0"
-              class="fas fa-chevron-down ps-3 f-size-1rem"></i></a>
+          <a><span class="{{selectedLang.value}}-font f-size-1-1rem">{{nav.i18n[selectedLang.value]}}</span><i
+              *ngIf="nav.children.length > 0" class="fas fa-chevron-down ps-3 f-size-1rem"></i></a>
           <ul *ngIf="nav.children.length > 0">
             <li *ngFor="let navChild of nav.children">
-              <a><span>{{navChild.name}}</span><i *ngIf="navChild.children.length > 0"
-                  class="fas fa-chevron-right ps-49 f-size-1rem"></i></a>
+              <a><span class="{{selectedLang.value}}-font f-size-1-1rem">{{navChild.i18n[selectedLang.value]}}</span><i
+                  *ngIf="navChild.children.length > 0" class="fas fa-chevron-right ps-49 f-size-1rem"></i></a>
               <ul *ngIf="navChild.children.length > 0">
                 <li *ngFor="let navChildsChild of navChild.children">
-                  <a><span>{{navChildsChild.name}}</span></a>
+                  <a>
+                    <span
+                      class="{{selectedLang.value}}-font f-size-1-1rem">{{navChildsChild.i18n[selectedLang.value]}}</span>
+                  </a>
                 </li>
               </ul>
             </li>
@@ -76,21 +79,7 @@
       </ul>
     </div>
   </div>
-  <div class="row h-400px p-0 m-0 carousel">
-    <div
-      class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 p-0 position-relative display-flex align-items-center">
-      <div class="prev display-flex align-items-center justify-content-center">
-        <i class="fas fa-angle-left color-white f-size-2-5rem"></i>
-      </div>
-      <div class="main" style="background-image: 'assets/images/1.jpg';">
-
-      </div>
-      <div class="next display-flex align-items-center justify-content-center">
-        <i class="fas fa-angle-right color-white f-size-2-5rem"></i>
-      </div>
-      <div class="slider"></div>
-    </div>
-  </div>
+  <app-carousel [imageList]="imageList" [selectedLang]="selectedLang"></app-carousel>
   <div class="row content">
 
   </div>

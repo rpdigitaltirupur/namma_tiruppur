@@ -1,29 +1,67 @@
 {
   "menuList": [
     {
-      "name": "Home",
-      "routeUrl": "/",
+      "name": "home",
+      "routeUrl": "/history",
+      "i18n": {
+        "en": "Home",
+        "ta": "முகப்பு"
+      },
       "children": [
         {
-          "name": "History",
+          "name": "news",
+          "routeUrl": "/",
+          "i18n": {
+            "en": "Tiruppur - Today",
+            "ta": "திருப்பூரில் - இன்று"
+          },
+          "children": []
+        },
+        {
+          "name": "history",
           "routeUrl": "/history",
+          "i18n": {
+            "en": "History",
+            "ta": "வரலாறு"
+          },
           "children": []
         }
       ]
     },
     {
-      "name": "Gallery",
-      "routeUrl": "/",
+      "name": "service",
+      "routeUrl": "",
+      "i18n": {
+        "en": "Services",
+        "ta": "சேவைகள்"
+      },
       "children": []
     },
     {
-      "name": "About",
-      "routeUrl": "/",
+      "name": "gallery",
+      "routeUrl": "/gallery",
+      "i18n": {
+        "en": "Gallery",
+        "ta": "பட தொகுப்பு"
+      },
       "children": []
     },
     {
-      "name": "Contact",
+      "name": "about",
+      "routeUrl": "/about",
+      "i18n": {
+        "en": "About Us",
+        "ta": "எங்களை பற்றி"
+      },
+      "children": []
+    },
+    {
+      "name": "contact",
       "routeUrl": "/",
+      "i18n": {
+        "en": "Contact Us",
+        "ta": "எங்களை தொடர"
+      },
       "children": []
     }
   ]

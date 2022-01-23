@@ -1,0 +1,25 @@
+<div class="row h-400px p-0 m-0 carousel">
+    <div
+        class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 p-0 position-relative display-flex align-items-center">
+        <div class="prev display-flex align-items-center justify-content-center">
+            <i class="fas fa-angle-left color-white f-size-2-5rem"></i>
+        </div>
+        <div class="main" [style.backgroundImage]="'url('+image.path+')'">
+
+        </div>
+        <div class="next display-flex align-items-center justify-content-center">
+            <i class="fas fa-angle-right color-white f-size-2-5rem"></i>
+        </div>
+        <div class="slider">
+            <h1 class="{{selectedLang.value}}-font">{{image.name[selectedLang.value]}}</h1>
+            <h3 class="{{selectedLang.value}}-font">{{image.description[selectedLang.value]}}</h3>
+        </div>
+        <div class="tile ps-5 pe-5">
+            <ul>
+                <li *ngFor="let image of imageList">
+                    <div class="tile-bar" [ngClass]="{'bg-color-theme': true}"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
