@@ -2,8 +2,10 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  Inject,
   OnDestroy,
   OnInit,
+  Renderer2,
 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
@@ -24,6 +26,8 @@ import {
 } from './core/models/common/Climate';
 import { HttpService } from './core/services/common/http-service.service';
 import { ICarousel } from './core/models/common/Carousel';
+import { RouterConstant } from './shared/constants/RouterConstant';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -32,29 +36,36 @@ import { ICarousel } from './core/models/common/Carousel';
 })
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   navList: IMenu[] = [];
-  lang: ILanguage = language.languages[0];
-  langs: ILanguage[] = language.languages;
-  selectedLang: ILanguage = language.languages[0];
+  lang!: ILanguage;
+  langs!: ILanguage[];
+  selectedLang!: ILanguage;
   showLangList: boolean = false;
   subscriptionOneSecond!: Subscription;
   subscriptionThreeSecond!: Subscription;
+  subscriptionTenSecond!: Subscription;
   climateResponse: IClimateResponse | undefined;
   climate: IClimate | undefined;
   dateTime: IDateTime | undefined;
   leftListSliding: boolean[] = [false, true, true, true, true, true, true];
   imageList!: ICarousel[];
+  status: boolean = false;
   constructor(
     public translateService: TranslateService,
     public title: Title,
     public httpService: HttpService,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2
   ) {
+    this.lang = language.languages[0];
+    this.langs = language.languages;
+    this.selectedLang = language.languages[0];
+    this.renderer.addClass(document.body, this.selectedLang.value + '-font');
     translateService.addLangs(this.getLanguages(this.langs));
     translateService.setDefaultLang(this.lang.value);
   }
   ngOnInit(): void {
     this.title.setTitle(this.lang.title + ' - ' + this.lang.subTitle);
-    this.getClimateResponse();
     this.subscriptionOneSecond = interval(1000).subscribe((x) => {
       this.processDateTime();
     });
@@ -67,8 +78,18 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     this.subscriptionOneSecond.unsubscribe();
     this.subscriptionThreeSecond.unsubscribe();
+    this.subscriptionTenSecond.unsubscribe();
   }
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void {
+    this.getClimateResponse();
+    this.subscriptionTenSecond = interval(60000).subscribe((x) => {
+      this.httpService.get(RouterConstant.STATUS).subscribe((data: any) => {
+        if (data && data.status === 'UP') {
+          this.status = true;
+        }
+      });
+    });
+  }
 
   outsideClick(clicked: any) {
     if (clicked) {
@@ -96,7 +117,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   getClimateResponse() {
     this.httpService
-      .get(environment.weatherApi + this.selectedLang.langUri)
+      .getWithoutParams(environment.weatherApi + this.selectedLang.langUri)
       .subscribe((data) => {
         this.climateResponse = <IClimateResponse>data;
         this.processClimateResponse();

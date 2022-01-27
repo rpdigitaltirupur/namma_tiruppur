@@ -16,8 +16,8 @@
         </div>
         <div class="tile ps-5 pe-5">
             <ul>
-                <li *ngFor="let image of imageList">
-                    <div class="tile-bar" [ngClass]="{'bg-color-theme': true}"></div>
+                <li *ngFor="let image of imageList; let i = index;" (click)="setImageSlider(i)">
+                    <div class="tile-bar" [ngClass]="{'bg-color-theme': image.active}"></div>
                 </li>
             </ul>
         </div>

@@ -15,6 +15,7 @@
             "en": "Tiruppur - Today",
             "ta": "திருப்பூரில் - இன்று"
           },
+          "menuType": 0,
           "children": []
         },
         {
@@ -35,7 +36,27 @@
         "en": "Services",
         "ta": "சேவைகள்"
       },
-      "children": []
+      "children": [
+        {
+          "name": "food",
+          "routeUrl": "",
+          "i18n": {
+            "en": "Food",
+            "ta": "உணவு"
+          },
+          "children": [
+            {
+              "name": "restaurants",
+              "routeUrl": "",
+              "i18n": {
+                "en": "Restaurants",
+                "ta": "உணவகங்கள்"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "gallery",

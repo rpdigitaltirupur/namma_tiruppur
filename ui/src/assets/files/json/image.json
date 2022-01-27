@@ -6,10 +6,59 @@
         "en": "Tiruppur"
       },
       "description": {
+        "ta": "இந்தியாவின் பின்னல் ஆடைகளின் தலைநகரம்",
+        "en": "Knit Wear Capital Of India"
+      },
+      "path": "../../../../assets/images/1.jpg",
+      "active": true
+    },
+    {
+      "name": {
+        "ta": "திருப்பூர்",
+        "en": "Tiruppur"
+      },
+      "description": {
         "ta": "இந்தியாவின் பின்னப்பட்ட ஆடைகளின் தலைநகரம்",
         "en": "Knit Wear Capital Of India"
       },
-      "path": "../../../../assets/images/1.jpg"
+      "path": "../../../../assets/images/1.jpg",
+      "active": true
+    },
+    {
+      "name": {
+        "ta": "திருப்பூர்",
+        "en": "Tiruppur"
+      },
+      "description": {
+        "ta": "இந்தியாவின் பின்னப்பட்ட ஆடைகளின் தலைநகரம்",
+        "en": "Knit Wear Capital Of India"
+      },
+      "path": "../../../../assets/images/1.jpg",
+      "active": true
+    },
+    {
+      "name": {
+        "ta": "திருப்பூர்",
+        "en": "Tiruppur"
+      },
+      "description": {
+        "ta": "இந்தியாவின் பின்னப்பட்ட ஆடைகளின் தலைநகரம்",
+        "en": "Knit Wear Capital Of India"
+      },
+      "path": "../../../../assets/images/1.jpg",
+      "active": true
+    },
+    {
+      "name": {
+        "ta": "திருப்பூர்",
+        "en": "Tiruppur"
+      },
+      "description": {
+        "ta": "இந்தியாவின் பின்ன ஆடைகளின் தலைநகரம்",
+        "en": "Knit Wear Capital Of India"
+      },
+      "path": "../../../../assets/images/1.jpg",
+      "active": true
     }
   ]
 }

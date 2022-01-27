@@ -56,6 +56,12 @@ body {
 .color-anti-flash-white {
   color: variables.$color-anti-flash-white !important;
 }
+.color-red {
+  color: variables.$color-red !important;
+}
+.color-green {
+  color: variables.$color-green !important;
+}
 .color-theme {
   color: variables.$color-theme !important;
 }
@@ -69,6 +75,9 @@ body {
 }
 
 //Font Size
+.f-size-0-9rem {
+  font-size: 0.9rem !important;
+}
 .f-size-1rem {
   font-size: 1rem !important;
 }
@@ -196,13 +205,13 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .en-font {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif !important;
 }
 .ta-font-1 {
   font-family: "Meera Inimai", sans-serif;
 }
 .ta-font {
-  font-family: "Mukta Malar", sans-serif;
+  font-family: "Mukta Malar", sans-serif !important;
 }
 .p-tooltip {
   font-family: "Oswald", sans-serif;

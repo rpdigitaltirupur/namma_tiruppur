@@ -6,6 +6,7 @@ export interface ILanguage {
   subTitle: string;
   langUri: string;
   font: string;
+  translate: any;
 }
 
 export class Language implements ILanguage {
@@ -16,4 +17,5 @@ export class Language implements ILanguage {
   subTitle!: string;
   langUri!: string;
   font!: string;
+  translate!: any;
 }

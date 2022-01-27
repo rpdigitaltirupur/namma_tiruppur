@@ -47,11 +47,13 @@
   padding-left: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .carousel .tile ul > li {
   padding-left: 20px;
   padding-right: 20px;
+  cursor: pointer;
 }
 
 .carousel .tile .tile-bar {
