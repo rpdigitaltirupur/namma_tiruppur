@@ -4,34 +4,40 @@
       <ul class="top-left-climate-list-ul w-100per">
         <li class="en-font display-flex align-items-center position-absolute"
           [ngClass]="{'visibility-hidden': leftListSliding[0]}"><i
-            class="fas fa-calendar-alt bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['date']}}" tooltipPosition="right"
+            class="fas fa-calendar-alt bg-color-theme w-50px text-align-center"
+            pTooltip="{{selectedLang.translate['date']}}" tooltipPosition="right"
             tooltipStyleClass="{{selectedLang.value}}-font"></i>&emsp;{{climate?.dateTime?.date}}</li>
         <li class="en-font display-flex align-items-center  position-absolute"
           [ngClass]="{'visibility-hidden': leftListSliding[1]}"><i
-            class="fas fa-clock bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['time']}}" tooltipPosition="right"
+            class="fas fa-clock bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['time']}}"
+            tooltipPosition="right"
             tooltipStyleClass="{{selectedLang.value}}-font"></i>&emsp;{{climate?.dateTime?.time}}</li>
         <li class="en-font display-flex align-items-center position-absolute"
           [ngClass]="{'visibility-hidden': leftListSliding[2]}"><i
-            class="fas fa-thermometer-full bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['temperature']}}"
-            tooltipPosition="right" tooltipStyleClass="{{selectedLang.value}}-font"></i><span
-            [innerHTML]="climate?.getTemperature()"></span></li>
+            class="fas fa-thermometer-full bg-color-theme w-50px text-align-center"
+            pTooltip="{{selectedLang.translate['temperature']}}" tooltipPosition="right"
+            tooltipStyleClass="{{selectedLang.value}}-font"></i><span [innerHTML]="climate?.getTemperature()"></span>
+        </li>
         <li class="en-font display-flex align-items-center  position-absolute lh-40px"
           [ngClass]="{'visibility-hidden': leftListSliding[3]}"><i
-            class="fas fa-sun bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['weather']}}" tooltipPosition="right"
-            tooltipStyleClass="{{selectedLang.value}}-font"></i><span
+            class="fas fa-sun bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['weather']}}"
+            tooltipPosition="right" tooltipStyleClass="{{selectedLang.value}}-font"></i><span
             class="{{lang.value}}-font">&emsp;{{climate?.getWeather()}}</span></li>
         <li class="en-font display-flex align-items-center position-absolute"
           [ngClass]="{'visibility-hidden': leftListSliding[4]}"><i
-            class="fas fa-wind bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['wind']}}" tooltipPosition="right"
-            tooltipStyleClass="{{selectedLang.value}}-font"></i><span [innerHTML]="climate?.getWind()"></span></li>
+            class="fas fa-wind bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['wind']}}"
+            tooltipPosition="right" tooltipStyleClass="{{selectedLang.value}}-font"></i><span
+            [innerHTML]="climate?.getWind()"></span></li>
         <li class="en-font display-flex align-items-center h-40px position-absolute lh-40px"
           [ngClass]="{'visibility-hidden': leftListSliding[5]}"><i
-            class="fas fa-tint bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['humidity']}}" tooltipPosition="right"
+            class="fas fa-tint bg-color-theme w-50px text-align-center"
+            pTooltip="{{selectedLang.translate['humidity']}}" tooltipPosition="right"
             tooltipStyleClass="{{selectedLang.value}}-font"></i>&emsp;{{climate?.getHumidity()}}</li>
         <li class="en-font display-flex align-items-center h-40px position-absolute lh-40px"
           [ngClass]="{'visibility-hidden': leftListSliding[6]}"><i
-            class="fas fa-cloud bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['cloud']}}" tooltipPosition="right"
-            tooltipStyleClass="{{selectedLang.value}}-font"></i>&emsp;{{climate?.getCloud()}}</li>
+            class="fas fa-cloud bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['cloud']}}"
+            tooltipPosition="right" tooltipStyleClass="{{selectedLang.value}}-font"></i>&emsp;{{climate?.getCloud()}}
+        </li>
       </ul>
     </div>
     <div class="col-12  col-sm-12 col-md-7 col-lg-7 m-0 p-0 color-white top-right-icon-list">
@@ -56,7 +62,7 @@
           </ul>
         </li>
         <li
-          pTooltip="{{selectedLang.translate['server']}} {{status ? selectedLang.translate['online']:selectedLang.translate['offline']}}"
+          pTooltip="{{selectedLang.translate['server']}} - {{status ? selectedLang.translate['online']:selectedLang.translate['offline']}}"
           tooltipPosition="left" tooltipStyleClass="{{selectedLang.value}}-font" class="top-right-icon-language">
           <i class="fas fa-circle color-red f-size-0-9rem" [ngClass]="{'color-green': status}"></i>
         </li>
@@ -71,7 +77,7 @@
   </div>
   <div class="row h-50px p-0 m-0 navigation">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 ps-3 pe-3 color-white menu">
-      <ul class="en-font f-weight-bold f-size-1-2rem">
+      <ul class="{{selectedLang.value}}-font f-weight-bold f-size-1-2rem">
         <li *ngFor="let nav of navList">
           <a><span class="{{selectedLang.value}}-font f-size-1-1rem">{{nav.i18n[selectedLang.value]}}</span><i
               *ngIf="nav.children.length > 0" class="fas fa-chevron-down ps-3 f-size-1rem"></i></a>
@@ -85,6 +91,33 @@
                     <span
                       class="{{selectedLang.value}}-font f-size-1-1rem">{{navChildsChild.i18n[selectedLang.value]}}</span>
                   </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="{{selectedLang.value}}-font f-weight-bold f-size-1-2rem float-right">
+        <li>
+          <a><span>{{selectedLang.translate['hello']}} Thangavel</span><i
+              class="fas fa-chevron-down ps-3 f-size-1rem"></i></a>
+          <ul class="right-0px">
+            <li *ngFor="let profile of profileList">
+              <a><i *ngIf="profile.children.length > 0" class="fas fa-chevron-left pe-3 f-size-1rem"></i><span
+                  class="{{selectedLang.value}}-font f-size-1-1rem text-align-right">{{profile.i18n[selectedLang.value]}}</span></a>
+              <ul *ngIf="profile.children.length > 0" class="left-m280px">
+                <li *ngFor="let profileChild of profile.children">
+                  <a><span
+                      class="{{selectedLang.value}}-font f-size-1-1rem">{{profileChild.i18n[selectedLang.value]}}</span><i
+                      *ngIf="profileChild.children.length > 0" class="fas fa-chevron-left ps-49 f-size-1rem"></i></a>
+                  <ul *ngIf="profileChild.children.length > 0">
+                    <li *ngFor="let profileChildsChild of profileChild.children">
+                      <a>
+                        <span
+                          class="{{selectedLang.value}}-font f-size-1-1rem">{{profileChildsChild.i18n[selectedLang.value]}}</span>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>

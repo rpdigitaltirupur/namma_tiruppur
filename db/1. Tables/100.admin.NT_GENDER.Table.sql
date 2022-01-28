@@ -1,0 +1,15 @@
+-- Table: admin.NT_GENDER
+
+-- DROP TABLE IF EXISTS admin.nt_gender;
+
+CREATE TABLE IF NOT EXISTS admin.nt_gender
+(
+    id INT GENERATED ALWAYS AS IDENTITY (START WITH 1000 INCREMENT BY 1) NOT NULL,
+    gender_nme VARCHAR(255) NOT NULL UNIQUE KEY,
+    CONSTRAINT "NT_GENDER_pkey" PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS admin.nt_gender
+    OWNER to postgres;

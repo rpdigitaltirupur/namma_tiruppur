@@ -24,7 +24,8 @@
         "weather": "வானிலை",
         "wind": "காற்று",
         "humidity": "ஈரப்பதம்",
-        "cloud": "மேகம்"
+        "cloud": "மேகம்",
+        "hello": "வணக்கம்"
       }
     },
     {
@@ -51,7 +52,8 @@
         "weather": "WEATHER",
         "wind": "WIND",
         "humidity": "HUMIDITY",
-        "cloud": "CLOUD"
+        "cloud": "CLOUD",
+        "hello": "Hello"
       }
     }
   ]

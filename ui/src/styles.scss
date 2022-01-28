@@ -126,6 +126,15 @@ body {
   height: 400px !important;
 }
 
+//Float
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
 //Justify Content
 .justify-content-center {
   justify-content: center !important;
@@ -167,9 +176,22 @@ body {
   position: absolute !important;
 }
 
+//Right
+.right-0px {
+  right: 0 !important
+}
+
+//Left
+.left-m280px {
+  left: -280px !important;
+}
+
 //Text Align
 .text-align-center {
   text-align: center !important;
+}
+.text-align-right {
+  text-align: right !important;
 }
 
 //Text Transform

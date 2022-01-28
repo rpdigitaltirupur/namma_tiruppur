@@ -36,6 +36,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   navList: IMenu[] = [];
+  profileList: IMenu[] = [];
   lang!: ILanguage;
   langs!: ILanguage[];
   selectedLang!: ILanguage;
@@ -73,6 +74,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
       this.processLeftListSliding();
     });
     this.navList = menu.menuList;
+    this.profileList = menu.profileList;
     this.imageList = image.imageList;
   }
   ngOnDestroy(): void {
@@ -82,12 +84,9 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.getClimateResponse();
+    this.getServerStatus();
     this.subscriptionTenSecond = interval(60000).subscribe((x) => {
-      this.httpService.get(RouterConstant.STATUS).subscribe((data: any) => {
-        if (data && data.status === 'UP') {
-          this.status = true;
-        }
-      });
+      this.getServerStatus();
     });
   }
 
@@ -123,6 +122,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
         this.processClimateResponse();
       });
   }
+
   processClimateResponse() {
     if (this.climateResponse) {
       let climate = new Climate();
@@ -185,5 +185,13 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
     }
     this.leftListSliding[prevIndex] = true;
     this.leftListSliding[index] = false;
+  }
+
+  getServerStatus() {
+    this.httpService.get(RouterConstant.STATUS).subscribe((data: any) => {
+      if (data && data.status === 'UP') {
+        this.status = true;
+      }
+    });
   }
 }

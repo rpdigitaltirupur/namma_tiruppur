@@ -85,5 +85,25 @@
       },
       "children": []
     }
+  ],
+  "profileList": [
+    {
+      "name": "profile",
+      "routeUrl": "",
+      "i18n": {
+        "en": "Profile",
+        "ta": "சுயவிவரம்"
+      },
+      "children": []
+    },
+    {
+      "name": "add-member",
+      "routeUrl": "",
+      "i18n": {
+        "en": "Add Member",
+        "ta": "உறுப்பினர் சேர்க்க"
+      },
+      "children": []
+    }
   ]
 }
