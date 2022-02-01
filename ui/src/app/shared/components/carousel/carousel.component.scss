@@ -1,13 +1,13 @@
 @use "../../../../global/variables";
 .carousel .prev,
 .carousel .next {
-  height: 500px;
+  height: 400px;
   width: 50px;
   position: absolute;
 }
 
 .carousel .main {
-  height: 500px;
+  height: 400px;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,14 +51,15 @@
 }
 
 .carousel .tile ul > li {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   cursor: pointer;
 }
 
 .carousel .tile .tile-bar {
-  width: 50px;
-  height: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background-color: variables.$color-white;
 }
 

@@ -9,8 +9,7 @@ import { environment } from 'src/environments/environment';
 export class HttpService {
   constructor(private httpClient: HttpClient) {}
   public get(uri: string, params?: any): Observable<any> {
-    console.log(environment.api + uri);
-    return this.httpClient.get<any>(environment.api + uri, { params: params });
+    return this.httpClient.get<any>(uri, { params: params });
   }
 
   public getWithoutParams(url: string): Observable<any> {

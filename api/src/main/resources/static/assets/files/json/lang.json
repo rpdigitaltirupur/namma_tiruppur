@@ -1,0 +1,60 @@
+{
+  "languages": [
+    {
+      "value": "ta",
+      "icon": "த",
+      "name": "தமிழ்",
+      "title": "நம்ம திருப்பூர்",
+      "subTitle": "வந்தாரை வாழவைக்கும் ஊரு",
+      "langUri": "&lang=ta",
+      "font": "ta-font",
+      "translate": {
+        "facebook": "முகநூல்",
+        "instagram": "படவரி",
+        "twitter": "கீச்சகம்",
+        "youtube": "வலையொளி",
+        "server": "வழங்கி",
+        "online": "இயங்கலை",
+        "offline": "முடக்கலை",
+        "whatsapp": "புலனம்",
+        "language": "மொழி",
+        "date": "தேதி",
+        "time": "நேரம்",
+        "temperature": "வெப்ப நிலை",
+        "weather": "வானிலை",
+        "wind": "காற்று",
+        "humidity": "ஈரப்பதம்",
+        "cloud": "மேகம்",
+        "hello": "வணக்கம்"
+      }
+    },
+    {
+      "value": "en",
+      "icon": "En",
+      "name": "ENGLISH",
+      "title": "Namma Tiruppur",
+      "subTitle": "Whoever comes, always welcome",
+      "langUri": "",
+      "font": "en-font",
+      "translate": {
+        "facebook": "FACEBOOK",
+        "instagram": "INSTAGRAM",
+        "twitter": "TWITTER",
+        "youtube": "YOUTUBE",
+        "server": "SERVER",
+        "online": "ONLINE",
+        "offline": "OFFLINE",
+        "whatsapp": "WHATSAPP",
+        "language": "LANGUAGE",
+        "date": "DATE",
+        "time": "TIME",
+        "temperature": "TEMPERATURE",
+        "weather": "WEATHER",
+        "wind": "WIND",
+        "humidity": "HUMIDITY",
+        "cloud": "CLOUD",
+        "hello": "Hello"
+      }
+    }
+  ]
+}

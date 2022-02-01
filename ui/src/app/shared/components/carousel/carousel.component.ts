@@ -2,6 +2,8 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { ICarousel } from 'src/app/core/models/common/Carousel';
 import { ILanguage } from 'src/app/core/models/common/Language';
+import { DataService } from 'src/app/core/services/common/data.service';
+import image from '../../../../assets/files/json/image.json';
 
 @Component({
   selector: 'app-carousel',
@@ -9,11 +11,13 @@ import { ILanguage } from 'src/app/core/models/common/Language';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit, OnDestroy {
-  @Input() imageList!: ICarousel[];
+  imageList!: ICarousel[];
   @Input() selectedLang!: ILanguage;
   imageSliderSubscription: Subscription | undefined;
   image!: ICarousel;
-  constructor() {}
+  constructor(public dataService: DataService) {
+    this.imageList = image.imageList;
+  }
 
   ngOnInit(): void {
     if (this.imageList.length > 0) {

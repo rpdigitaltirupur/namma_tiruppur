@@ -39,6 +39,9 @@ body {
 .border-bottom-3px-solid-1b9bff {
   border-bottom: 3px solid variables.$color-theme;
 }
+.border-color-theme {
+  border: 3px solid variables.$color-theme;
+}
 
 //Color
 .color-dodger-blue {
@@ -122,6 +125,9 @@ body {
 .h-120px {
   height: 120px !important;
 }
+.h-300px {
+  height: 300px !important;
+}
 .h-400px {
   height: 400px !important;
 }
@@ -138,6 +144,10 @@ body {
 //Justify Content
 .justify-content-center {
   justify-content: center !important;
+}
+
+.justify-content-end {
+  justify-content: end !important;
 }
 
 //Line Height
