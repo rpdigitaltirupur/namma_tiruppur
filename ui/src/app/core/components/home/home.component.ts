@@ -80,9 +80,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.getClimateResponse();
-    //this.getServerStatus();
+    this.getServerStatus();
     this.subscriptionTenSecond = interval(60000).subscribe((x) => {
-      //this.getServerStatus();
+      this.getServerStatus();
     });
   }
 
@@ -109,7 +109,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     return langsArray;
   }
 
-  getClimateResponse() {
+  async getClimateResponse() {
     this.httpService
       .getWithoutParams(environment.weatherApi + this.selectedLang.langUri)
       .subscribe((data) => {
@@ -183,7 +183,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   getServerStatus() {
-    this.httpService.get(RouterConstant.STATUS).subscribe((data: any) => {
+    this.httpService.get("http://localhost:8080"+RouterConstant.STATUS).subscribe((data: any) => {
       if (data && data.status === 'UP') {
         this.status = true;
       }

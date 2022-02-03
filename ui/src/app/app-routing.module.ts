@@ -21,6 +21,13 @@ const routes: Routes = [
         (module) => module.HomeModule
       ),
   },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./core/components/contact/contact.module').then(
+        (module) => module.ContactModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
