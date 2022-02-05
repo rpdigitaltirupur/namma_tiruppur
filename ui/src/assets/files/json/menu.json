@@ -78,7 +78,7 @@
     },
     {
       "name": "contact",
-      "routeUrl": "/",
+      "routeUrl": "/contact",
       "i18n": {
         "en": "Contact Us",
         "ta": "எங்களை தொடர"

@@ -8,13 +8,6 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'admin',
-    loadChildren: () =>
-      import('./core/components/admin/admin.module').then(
-        (module) => module.AdminModule
-      ),
-  },
-  {
     path: 'home',
     loadChildren: () =>
       import('./core/components/home/home.module').then(
@@ -25,8 +18,13 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () =>
       import('./core/components/contact/contact.module').then(
-        (module) => module.ContactModule
+        (m) => m.ContactModule
       ),
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./core/components/admin/admin.module').then((m) => m.AdminModule),
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];

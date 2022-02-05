@@ -31,6 +31,9 @@ body {
 .bg-color-theme {
   background-color: variables.$color-theme !important;
 }
+.bg-color-sub-theme {
+  background-color: variables.$color-sub-theme !important;
+}
 
 //Border
 .border-1px-solid {
@@ -96,7 +99,9 @@ body {
 .f-size-1-5rem {
   font-size: 1.5rem !important;
 }
-
+.f-size-2rem {
+  font-size: 2rem !important;
+}
 .f-size-2-5rem {
   font-size: 2.5rem !important;
 }
@@ -113,6 +118,9 @@ body {
 .h-20px {
   height: 20px !important;
 }
+.h-30px {
+  height: 30px !important;
+}
 .h-40px {
   height: 40px !important;
 }
@@ -124,6 +132,12 @@ body {
 }
 .h-120px {
   height: 120px !important;
+}
+.h-150px {
+  height: 150px !important;
+}
+.h-200px {
+  height: 200px !important;
 }
 .h-300px {
   height: 300px !important;

@@ -1,0 +1,61 @@
+<app-top-header [selectedLang]="selectedLang"></app-top-header>
+<div class="row h-120px p-0 m-0 header">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0 color-white header-banner">
+        <img src="../assets/images/{{selectedLang.value}}.png" />
+    </div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 m-0 p-0 color-white header-ad"></div>
+</div>
+<div class="row h-50px p-0 m-0 navigation">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 ps-3 pe-3 color-white menu">
+        <ul class="{{selectedLang.value}}-font f-weight-bold f-size-1-2rem">
+            <li *ngFor="let nav of navList" [routerLink]="nav.routeUrl">
+                <a><span class="{{selectedLang.value}}-font f-size-1-1rem">{{nav.i18n[selectedLang.value]}}</span><i
+                        *ngIf="nav.children.length > 0" class="fas fa-chevron-down ps-3 f-size-1rem"></i></a>
+                <ul *ngIf="nav.children.length > 0">
+                    <li *ngFor="let navChild of nav.children" [routerLink]="navChild.routeUrl">
+                        <a><span
+                                class="{{selectedLang.value}}-font f-size-1-1rem">{{navChild.i18n[selectedLang.value]}}</span><i
+                                *ngIf="navChild.children.length > 0"
+                                class="fas fa-chevron-right ps-49 f-size-1rem"></i></a>
+                        <ul *ngIf="navChild.children.length > 0">
+                            <li *ngFor="let navChildsChild of navChild.children" [routerLink]="navChildsChild.routeUrl">
+                                <a>
+                                    <span
+                                        class="{{selectedLang.value}}-font f-size-1-1rem">{{navChildsChild.i18n[selectedLang.value]}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="{{selectedLang.value}}-font f-weight-bold f-size-1-1rem float-right">
+            <li>
+                <a><span>{{selectedLang.translate['hello']}} Thangavel</span><i
+                        class="fas fa-chevron-down ps-3 f-size-1rem"></i></a>
+                <ul class="right-0px">
+                    <li *ngFor="let profile of profileList">
+                        <a><i *ngIf="profile.children.length > 0" class="fas fa-chevron-left pe-3 f-size-1rem"></i><span
+                                class="{{selectedLang.value}}-font f-size-1-1rem text-align-right">{{profile.i18n[selectedLang.value]}}</span></a>
+                        <ul *ngIf="profile.children.length > 0" class="left-m280px">
+                            <li *ngFor="let profileChild of profile.children">
+                                <a><span
+                                        class="{{selectedLang.value}}-font f-size-1-1rem">{{profileChild.i18n[selectedLang.value]}}</span><i
+                                        *ngIf="profileChild.children.length > 0"
+                                        class="fas fa-chevron-left ps-49 f-size-1rem"></i></a>
+                                <ul *ngIf="profileChild.children.length > 0">
+                                    <li *ngFor="let profileChildsChild of profileChild.children">
+                                        <a>
+                                            <span
+                                                class="{{selectedLang.value}}-font f-size-1-1rem">{{profileChildsChild.i18n[selectedLang.value]}}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

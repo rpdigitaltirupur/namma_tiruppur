@@ -1,0 +1,30 @@
+<div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0 h-150px footer-content">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="container-fluid m-0 p-0">
+                <div class="row m-0 p-0">
+                    <div
+                        class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 m-0 p-0 footer-copyright-language">
+                        <ul class="h-50px p-0 m-0">
+                            <li class="h-50px ps-2 pe-2 m-0" *ngFor="let language of languages">
+                                <a (click)="changeLanguage(language)"
+                                    [ngStyle]="language.value !== 'ta' ? {'margin-top': '2px'} : null">{{language.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0 h-50px footer-copyright">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9 m-0 p-0 footer-copyright-left">
+            <p class="{{selectedLang.value}}-font">{{selectedLang.translate.footer.copyright}} &copy; {{year}}
+                {{selectedLang.translate.footer.companyName}} {{selectedLang.translate.footer.rightsReserved}}.</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3 m-0 p-0 footer-copyright-right">
+            <p class="{{selectedLang.value}}-font"><a>{{selectedLang.translate.footer.siteMap}}</a> |
+                <a>{{selectedLang.translate.footer.privacyPolicy}}</a>
+            </p>
+        </div>
+    </div>
+</div>

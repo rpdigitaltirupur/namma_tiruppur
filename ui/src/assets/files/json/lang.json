@@ -25,7 +25,50 @@
         "wind": "காற்று",
         "humidity": "ஈரப்பதம்",
         "cloud": "மேகம்",
-        "hello": "வணக்கம்"
+        "hello": "வணக்கம்",
+        "contact": {
+          "title": "எங்களை தொடர்பு கொள்ள",
+          "subTitle": "உங்கள் கேள்விகளுக்கு எப்போதும் எங்களால் பதிலளிக்க முடியும். இங்கே கேளுங்கள்.",
+          "form": {
+            "name": "பெயர்",
+            "email": "மின்னஞ்சல்",
+            "subject": "பொருள்",
+            "comment": "வினவல்/கருத்து",
+            "submit": "சமர்ப்பிக்க",
+            "placeHolder": {
+              "name": "உங்கள் பெயரை உள்ளிடவும்",
+              "email": "உங்கள் சரியான மின்னஞ்சல் முகவரியை உள்ளிடவும்",
+              "subject": "பொருள் உள்ளிடவும்",
+              "comment": "வினவல்/கருத்தை உள்ளிடவும்"
+            }
+          },
+          "details": {
+            "callUs": "எங்களை அழைக்க",
+            "emailUs": "எங்களுக்கு மின்னஞ்சல் செய்ய",
+            "location": "இடம்",
+            "businessHours": "வேலை நேரம்",
+            "value": {
+              "callUs": ["+91 90420 79408"],
+              "emailUs": ["contact@nammatiruppur.com"],
+              "location": [
+                "4, கே எம் நகர், 3 வது வீதி,",
+                "வெள்ளியங்காடு(தெற்கு),",
+                "திருப்பூர் - 641 604"
+              ],
+              "businessHours": [
+                "திங்கள் - சனி காலை 9 மணி முதல் இரவு 9 மணி வரை",
+                "ஞாயிறு காலை 11 மணி முதல் 5 மணி வரை"
+              ]
+            }
+          }
+        },
+        "footer": {
+          "copyright": "பதிப்புரிமை",
+          "companyName": "உத்ரா டெக்னாலஜிஸ்",
+          "rightsReserved": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை",
+          "siteMap": "தளவரைபடம்",
+          "privacyPolicy": "தனியுரிமைக் கொள்கை"
+        }
       }
     },
     {
@@ -53,7 +96,47 @@
         "wind": "WIND",
         "humidity": "HUMIDITY",
         "cloud": "CLOUD",
-        "hello": "Hello"
+        "hello": "HELLO",
+        "contact": {
+          "title": "CONTACT US",
+          "subTitle": "YOUR QUESTIONS ARE ALWAYS ANSWERABLE BY US. ASK HERE.",
+          "form": {
+            "name": "NAME",
+            "email": "EMAIL",
+            "subject": "SUBJECT",
+            "comment": "QUERY/COMMENT",
+            "submit": "SUBMIT",
+            "placeHolder": {
+              "name": "ENTER YOUR NAME",
+              "email": "ENTER YOUR VALID EMAIL ADDRESS",
+              "subject": "ENTER SUBJECT",
+              "comment": "ENTER QUERY/COMMENT"
+            }
+          },
+          "details": {
+            "callUs": "CALL US",
+            "emailUs": "EMAIL US",
+            "location": "LOCATION",
+            "businessHours": "BUSINESS HOURS",
+            "value": {
+              "callUs": ["+91 90420 79408"],
+              "emailUs": ["contact@nammatiruppur.com"],
+              "location": [
+                "4, K M NAGAR, 3RD STREET,",
+                "VELLIANGADU(SOUTH),",
+                "TIRUPPUR - 641 604"
+              ],
+              "businessHours": ["MON - SAT 9 AM TO 9 PM", "SUN 11 AM TO 5 PM"]
+            }
+          }
+        },
+        "footer": {
+          "copyright": "COPYRIGHT",
+          "companyName": "UTHRA TECHNOLOGIES",
+          "rightsReserved": "ALL RIGHTS RESERVED",
+          "siteMap": "SITEMAP",
+          "privacyPolicy": "PRIVACY POLICY"
+        }
       }
     }
   ]

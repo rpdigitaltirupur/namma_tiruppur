@@ -1,0 +1,106 @@
+@use "../../../../../global/variables";
+
+//HEADER
+.header {
+    background-color: variables.$color-white;
+    box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 8px 6px -6px rgb(0 0 0 / 10%);
+    z-index: 5;
+  }
+  .header .header-banner {
+    display: flex;
+    align-items: center;
+  }
+  .header .header-banner img {
+    width: 210px;
+    height: 90px;
+    margin-left: 20px;
+  }
+  
+  //MENU
+  .navigation {
+    background-color: variables.$color-white !important;
+    border-top: 1px solid rgba(0, 0, 0, 10%);
+    border-bottom: 1px solid rgba(0, 0, 0, 10%);
+  }
+  .menu {
+    height: 48px;
+  }
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 56px;
+    display: inline-flex;
+    margin-top: -4px;
+  }
+  .menu ul li {
+    color: variables.$color-black;
+    height: 56px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+  }
+  .menu ul li:hover > a {
+    border-bottom: 3px solid variables.$color-theme;
+    color: variables.$color-theme;
+  }
+  .menu ul li a {
+    background-color: variables.$color-white;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    -webkit-box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+      0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+    box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+      0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+  }
+  
+  .menu ul li ul {
+    position: absolute;
+    top: 108%;
+    z-index: 99999;
+    padding-left: 0;
+    display: none !important;
+  }
+  
+  .menu ul li:hover > ul {
+    display: block !important;
+  }
+  
+  .menu ul li ul li,
+  .menu ul li ul li a {
+    width: 280px;
+  }
+  
+  .menu ul li ul li a span {
+    width: 230px;
+  }
+  
+  .menu ul li ul li a {
+    box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+      0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+    -webkit-box-shadow: -1px 0 0 0 rgb(0 0 0 / 10%), 1px 0 0 0 rgb(0 0 0 / 10%),
+      0 -1px 0 0 rgb(0 0 0 / 10%), 0 1px 0 0 rgb(0 0 0 / 10%);
+  }
+  
+  .menu ul li ul li ul {
+    position: absolute;
+    z-index: 999999;
+    padding-left: 0;
+    left: 100%;
+    top: 7%;
+    display: none;
+  }
+  
+  .menu ul li ul li:hover > ul {
+    display: block !important;
+  }
+  
+  
+  

@@ -1,0 +1,34 @@
+@use "../../../../../global/variables";
+.footer-content {
+    background-color: variables.$color-theme;
+}
+.footer-copyright {
+    background-color: variables.$color-sub-theme;
+    color: variables.$color-white;
+}
+.footer-copyright-left p {
+    margin: 0;
+    line-height: 50px;
+    padding-left: 10px;
+    text-align: left;
+}
+.footer-copyright-right p {
+    margin: 0;
+    line-height: 50px;
+    padding-right: 10px;
+    text-align: right;
+}
+.footer-copyright-language ul {
+    color: variables.$color-white;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-copyright-language ul li {
+    display: flex;
+    align-items: center;
+}
+.footer-copyright-language ul li a {
+    cursor: pointer;
+}

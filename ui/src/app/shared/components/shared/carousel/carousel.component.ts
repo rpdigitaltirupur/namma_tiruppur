@@ -3,7 +3,7 @@ import { interval, Subscription } from 'rxjs';
 import { ICarousel } from 'src/app/core/models/common/Carousel';
 import { ILanguage } from 'src/app/core/models/common/Language';
 import { DataService } from 'src/app/core/services/common/data.service';
-import image from '../../../../assets/files/json/image.json';
+import image from '../../../../../assets/files/json/image.json';
 
 @Component({
   selector: 'app-carousel',

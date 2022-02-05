@@ -1,0 +1,22 @@
+@use "../../../../global/_variables.scss";
+.contact {
+  border-top: 3px solid variables.$color-theme;
+}
+.contact-header {
+  border-bottom: 1px solid variables.$color-spanish-grey;
+}
+.contact-button {
+  border: 0;
+  outline: none;
+  float: right;
+  padding: 5px 70px;
+  border-radius: 5px;
+  background-color: variables.$color-theme;
+  color: variables.$color-white;
+}
+
+.contact-content-right {
+  display: flex;
+    align-items: center;
+    background-color: variables.$color-theme;
+}

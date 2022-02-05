@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminRoutingModule } from './admin-routing.module';
-import { ProfileComponent } from './profile/profile.component';
-import { RegisterComponent } from './register/register.component';
 
+import { AdminRoutingModule } from './admin-routing.module';
+import { AdminComponent } from './admin.component';
+import { SharedModule } from 'src/app/shared/components/shared/shared.module';
 
 @NgModule({
-  declarations: [ProfileComponent, RegisterComponent],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+  declarations: [AdminComponent],
+  imports: [CommonModule, AdminRoutingModule, SharedModule],
 })
-export class AdminModule { }
+export class AdminModule {}
