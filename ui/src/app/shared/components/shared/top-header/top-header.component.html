@@ -1,6 +1,7 @@
-<div class="row m-0 ps-2 pe-2 h-40px bg-color-sub-theme">
-    <div class="col-12 col-sm-12 col-md-5 col-lg-5 m-0 p-0 color-white top-left-climate-list">
-      <ul class="top-left-climate-list-ul w-100per">
+<div class="container-fluid p-0 m-0">
+  <div class="row m-0 ps-2 pe-2 bg-color-sub-theme">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-5 m-0 p-0 color-white top-left-climate-list">
+<ul class="top-left-climate-list-ul w-100per">
         <li class="en-font display-flex align-items-center position-absolute"
           [ngClass]="{'visibility-hidden': leftListSliding[0]}"><i
             class="fas fa-calendar-alt bg-color-theme w-50px text-align-center"
@@ -37,9 +38,9 @@
             class="fas fa-cloud bg-color-theme w-50px text-align-center" pTooltip="{{selectedLang.translate['cloud']}}"
             tooltipPosition="right" tooltipStyleClass="{{selectedLang.value}}-font"></i>&emsp;{{climate?.getCloud()}}
         </li>
-      </ul>
+      </ul> 
     </div>
-    <div class="col-12  col-sm-12 col-md-7 col-lg-7 m-0 p-0 color-white top-right-icon-list">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-7 m-0 p-0 color-white top-right-icon-list">
       <ul class="display-flex">
         <li pTooltip="{{selectedLang.translate['facebook']}}" tooltipPosition="left"
           tooltipStyleClass="{{selectedLang.value}}-font"><i class="fab fa-facebook-f"></i>
@@ -69,3 +70,4 @@
       </ul>
     </div>
   </div>
+</div>

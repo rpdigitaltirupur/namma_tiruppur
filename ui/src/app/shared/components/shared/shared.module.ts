@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TooltipModule } from 'primeng/tooltip';
 import { RouterModule } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
+    SideMenuComponent,
   ],
   imports: [CommonModule, TooltipModule, RouterModule],
   exports: [
@@ -20,6 +22,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
+    SideMenuComponent
   ],
 })
 export class SharedModule {}

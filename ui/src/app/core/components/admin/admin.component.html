@@ -1,4 +1,9 @@
-<div class="container-fluid m-0 p-0 bg-color-anti-flash-white">
-  <app-header [selectedLang]="selectedLang"></app-header>
-  <router-outlet></router-outlet>
+<div class="side-menu" style="left: {{menuLeft}}px">
+
+</div>
+<div class="main" style="left: {{mainLeft}}px">
+  <div class="container-fluid m-0 p-0 bg-color-anti-flash-white">
+    <app-header [selectedLang]="selectedLang"></app-header>
+    <router-outlet></router-outlet>
+  </div>
 </div>

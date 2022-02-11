@@ -11,11 +11,32 @@ import { DataService } from '../../services/common/data.service';
 export class ContactComponent implements OnInit {
   selectedLang!: ILanguage;
   ContactFormGroup!: FormGroup;
-  constructor(public dataService: DataService) {}
-  ngOnInit(): void {
+  showSideMenu!: Boolean;
+  menuLeft: number = -250;
+  mainLeft: number = 0;
+  constructor(public dataService: DataService) {
     this.dataService.getSelectedLang().subscribe((value) => {
       this.selectedLang = value;
     });
+    this.showSideMenu = this.dataService.showSideMenu.value;
+    this.changeSideMenuLeft();
+    this.dataService.getShowSideMenu().subscribe((value) => {
+      this.showSideMenu = value;
+      this.changeSideMenuLeft();
+    });
+  }
+
+  changeSideMenuLeft() {
+    if(this.showSideMenu) {
+      this.menuLeft = 0;
+      this.mainLeft = 250;
+    }
+    else {
+      this.menuLeft = -250;
+      this.mainLeft = 0;
+    }
+  }
+  ngOnInit(): void {
     this.ContactFormGroup = new FormGroup({
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),

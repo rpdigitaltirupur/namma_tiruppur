@@ -8,9 +8,11 @@ import language from '../../../../assets/files/json/lang.json';
 })
 export class DataService {
   private selectedLang: BehaviorSubject<ILanguage>;
+  public showSideMenu: BehaviorSubject<Boolean>;
 
   constructor() {
     this.selectedLang = new BehaviorSubject<ILanguage>(language.languages[0]);
+    this.showSideMenu = new BehaviorSubject<Boolean>(false);
   }
 
   getSelectedLang(): Observable<ILanguage> {
@@ -19,5 +21,13 @@ export class DataService {
 
   setSelectedLang(value: ILanguage): void {
     this.selectedLang.next(value);
+  }
+
+  getShowSideMenu(): Observable<Boolean> {
+    return this.showSideMenu.asObservable();
+  }
+
+  setShowSideMenu(value: Boolean): void {
+    this.showSideMenu.next(value);
   }
 }

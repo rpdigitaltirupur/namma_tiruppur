@@ -1,9 +1,22 @@
 <app-top-header [selectedLang]="selectedLang"></app-top-header>
-<div class="row h-120px p-0 m-0 header">
-    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0 color-white header-banner">
-        <img src="../assets/images/{{selectedLang.value}}.png" />
+<div class="row p-0 m-0 header">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 m-0 p-0 color-white header-banner h-120px ">
+        <div class="container-fluid m-0 p-0  ">
+            <div class="row m-0 p-0">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 p-0">
+                    <div class="container-fluid m-0 p-0">
+                        <div class="row m-0 p-0">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 p-0 header-banner-img">
+                                <i class="fas fa-bars color-theme float-right" (click)="showHideSideMenu()"></i>
+                                <img src="../assets/images/{{selectedLang.value}}.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 m-0 p-0 color-white header-ad"></div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 m-0 p-0 color-white header-ad h-120px "></div>
 </div>
 <div class="row h-50px p-0 m-0 navigation">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0 ps-3 pe-3 color-white menu">

@@ -1,83 +1,95 @@
-<div class="container-fluid bg-color-anti-flash-white">
-  <app-header [selectedLang]="selectedLang"></app-header>
-  <div class="row h-20px"></div>
-  <div class="row m-2">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-      <div class="container-fluid p-0">
-        <div class="row m-0 bg-color-white contact">
-          <div
-            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 {{selectedLang.value}}-font contact-header">
-            <h4 class="f-size-2rem py-2 ps-2 m-0">{{selectedLang.translate.contact.title}}</h4>
+<div class="side-menu" style="left: {{menuLeft}}px">
+
+</div>
+<div class="main" style="left: {{mainLeft}}px">
+  <div class="container-fluid bg-color-anti-flash-white p-0">
+    <app-header [selectedLang]="selectedLang"></app-header>
+    <div class="row h-20px m-0"></div>
+    <div class="row m-2">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="container-fluid p-0">
+          <div class="row m-0 bg-color-white contact">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 {{selectedLang.value}}-font contact-header">
+              <h4 class="f-size-2rem py-2 ps-2 m-0">{{selectedLang.translate.contact.title}}</h4>
+            </div>
           </div>
-        </div>
-        <div class="row bg-color-white m-0">
-          <div
-            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 {{selectedLang.value}}-font contact-content p-0">
-            <div class="container-fluid m-0 p-0">
-              <div class="row m-0 p-0">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 p-5 contact-content-left">
-                  <h4>{{selectedLang.translate.contact.subTitle}}</h4>
-                  <form [formGroup]="ContactFormGroup">
-                    <div class="container-fluid m-0 p-3">
-                      <div class="row pt-3">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="name">{{selectedLang.translate.contact.form.name}}</label>
-                            <input type="text" class="form-control" name="name" formControlName="name" [placeholder]="selectedLang.translate.contact.form.placeHolder.name"/>
+          <div class="row bg-color-white m-0">
+            <div
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 {{selectedLang.value}}-font contact-content p-0">
+              <div class="container-fluid m-0 p-0">
+                <div class="row m-0 p-0">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 p-5 contact-content-left">
+                    <h4>{{selectedLang.translate.contact.subTitle}}</h4>
+                    <form [formGroup]="ContactFormGroup">
+                      <div class="container-fluid m-0 p-3">
+                        <div class="row pt-3">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label for="name">{{selectedLang.translate.contact.form.name}}</label>
+                              <input type="text" class="form-control" name="name" formControlName="name"
+                                [placeholder]="selectedLang.translate.contact.form.placeHolder.name" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row pt-3">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label for="name">{{selectedLang.translate.contact.form.email}}</label>
+                              <input type="text" class="form-control" name="email" formControlName="email"
+                                [placeholder]="selectedLang.translate.contact.form.placeHolder.email" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row pt-3">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label for="name">{{selectedLang.translate.contact.form.subject}}</label>
+                              <input type="text" class="form-control" name="subject" formControlName="subject"
+                                [placeholder]="selectedLang.translate.contact.form.placeHolder.subject" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row pt-3">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label for="name">{{selectedLang.translate.contact.form.comment}}</label>
+                              <textarea class="form-control h-100px" name="comment" formControlName="comment"
+                                maxlength="1000"
+                                [placeholder]="selectedLang.translate.contact.form.placeHolder.comment"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row pt-4">
+                          <div class="col-md-12">
+                            <button class="contact-button">{{selectedLang.translate.contact.form.submit}}</button>
                           </div>
                         </div>
                       </div>
-                      <div class="row pt-3">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="name">{{selectedLang.translate.contact.form.email}}</label>
-                            <input type="text" class="form-control" name="email" formControlName="email"  [placeholder]="selectedLang.translate.contact.form.placeHolder.email"/>
-                          </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 p-5 contact-content-right">
+                    <div class="container-fluid m-0 p-0">
+                      <div class="row m-0 p-0">
+                        <div
+                          class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 m-0 p-0 color-white text-align-center {{selectedLang.value}}-font">
+                          <h4>{{selectedLang.translate.contact.details.callUs}}</h4>
+                          <h5 *ngFor="let call of selectedLang.translate.contact.details.value.callUs" class="en-font">
+                            {{call}}</h5>
+                          <br />
+                          <h4>{{selectedLang.translate.contact.details.emailUs}}</h4>
+                          <h5 *ngFor="let email of selectedLang.translate.contact.details.value.emailUs"
+                            class="en-font">{{email}}</h5>
+                          <br />
+                          <h4>{{selectedLang.translate.contact.details.location}}</h4>
+                          <h5 *ngFor="let location of selectedLang.translate.contact.details.value.location">
+                            {{location}}
+                          </h5>
+                          <br />
+                          <h4>{{selectedLang.translate.contact.details.businessHours}}</h4>
+                          <h5 *ngFor="let businessHour of selectedLang.translate.contact.details.value.businessHours">
+                            {{businessHour}}</h5>
                         </div>
-                      </div>
-                      <div class="row pt-3">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="name">{{selectedLang.translate.contact.form.subject}}</label>
-                            <input type="text" class="form-control" name="subject" formControlName="subject"  [placeholder]="selectedLang.translate.contact.form.placeHolder.subject"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row pt-3">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label for="name">{{selectedLang.translate.contact.form.comment}}</label>
-                            <textarea class="form-control h-100px" name="comment" formControlName="comment"
-                              maxlength="1000"  [placeholder]="selectedLang.translate.contact.form.placeHolder.comment"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row pt-4">
-                        <div class="col-md-12">
-                          <button class="contact-button">{{selectedLang.translate.contact.form.submit}}</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5 p-5 contact-content-right">
-                  <div class="container-fluid m-0 p-0">
-                    <div class="row m-0 p-0">
-                      <div
-                        class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 m-0 p-0 color-white text-align-center {{selectedLang.value}}-font">
-                        <h4>{{selectedLang.translate.contact.details.callUs}}</h4>
-                        <h5 *ngFor="let call of selectedLang.translate.contact.details.value.callUs">{{call}}</h5>
-                        <br />
-                        <h4>{{selectedLang.translate.contact.details.emailUs}}</h4>
-                        <h5 *ngFor="let email of selectedLang.translate.contact.details.value.emailUs">{{email}}</h5>
-                        <br />
-                        <h4>{{selectedLang.translate.contact.details.location}}</h4>
-                        <h5 *ngFor="let location of selectedLang.translate.contact.details.value.location">{{location}}
-                        </h5>
-                        <br />
-                        <h4>{{selectedLang.translate.contact.details.businessHours}}</h4>
-                        <h5 *ngFor="let businessHour of selectedLang.translate.contact.details.value.businessHours">
-                          {{businessHour}}</h5>
                       </div>
                     </div>
                   </div>
@@ -88,7 +100,7 @@
         </div>
       </div>
     </div>
+    <div class="row h-10px m-0"></div>
   </div>
-  <div class="row h-10px"></div>
+  <app-footer [selectedLang]="selectedLang"></app-footer>
 </div>
-<app-footer [selectedLang]="selectedLang"></app-footer>
