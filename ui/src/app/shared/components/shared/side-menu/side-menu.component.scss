@@ -1,0 +1,34 @@
+@use "../../../../../global/variables";
+
+ul {
+  list-style-type: none;
+  display: block;
+  margin: 0 0 15px;
+  padding: 0;
+  background-color: variables.$color-white;
+}
+
+ul li {
+  line-height: 40px;
+}
+
+ul li a {
+  padding: 0 10px;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul li ul li  a {
+    padding: 0 20px;
+}
+
+ul li ul li ul li a {
+    padding: 0 30px;
+}
+
+ul li a i {
+    position: absolute;
+    right: 15px;
+    line-height: 40px;
+}

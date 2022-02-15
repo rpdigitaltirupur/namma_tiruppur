@@ -1,5 +1,5 @@
 <div class="side-menu" style="left: {{menuLeft}}px">
-
+  <app-side-menu [selectedLang]="selectedLang"></app-side-menu>
 </div>
 <div class="main" style="left: {{mainLeft}}px">
   <div class="container-fluid bg-color-anti-flash-white p-0">
@@ -11,7 +11,7 @@
           <div class="row m-0 bg-color-white contact">
             <div
               class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 {{selectedLang.value}}-font contact-header">
-              <h4 class="f-size-2rem py-2 ps-2 m-0">{{selectedLang.translate.contact.title}}</h4>
+              <p class="f-size-2rem py-2 ps-2 m-0">{{selectedLang.translate.contact.title}}</p>
             </div>
           </div>
           <div class="row bg-color-white m-0">
@@ -19,10 +19,10 @@
               class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 {{selectedLang.value}}-font contact-content p-0">
               <div class="container-fluid m-0 p-0">
                 <div class="row m-0 p-0">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 p-5 contact-content-left">
-                    <h4>{{selectedLang.translate.contact.subTitle}}</h4>
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 p-4 contact-content-left">
+                    <p>{{selectedLang.translate.contact.subTitle}}</p>
                     <form [formGroup]="ContactFormGroup">
-                      <div class="container-fluid m-0 p-3">
+                      <div class="container-fluid m-0 p-0">
                         <div class="row pt-3">
                           <div class="col-md-12">
                             <div class="form-group">
@@ -73,22 +73,22 @@
                       <div class="row m-0 p-0">
                         <div
                           class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 m-0 p-0 color-white text-align-center {{selectedLang.value}}-font">
-                          <h4>{{selectedLang.translate.contact.details.callUs}}</h4>
-                          <h5 *ngFor="let call of selectedLang.translate.contact.details.value.callUs" class="en-font">
-                            {{call}}</h5>
+                          <p class="header">{{selectedLang.translate.contact.details.callUs}}</p>
+                          <p *ngFor="let call of selectedLang.translate.contact.details.value.callUs" class="en-font f-size-1-5rem">
+                            {{call}}</p>
                           <br />
-                          <h4>{{selectedLang.translate.contact.details.emailUs}}</h4>
-                          <h5 *ngFor="let email of selectedLang.translate.contact.details.value.emailUs"
-                            class="en-font">{{email}}</h5>
+                          <p class="header">{{selectedLang.translate.contact.details.emailUs}}</p>
+                          <p *ngFor="let email of selectedLang.translate.contact.details.value.emailUs"
+                            class="en-font f-size-1-5rem">{{email}}</p>
                           <br />
-                          <h4>{{selectedLang.translate.contact.details.location}}</h4>
-                          <h5 *ngFor="let location of selectedLang.translate.contact.details.value.location">
+                          <p class="header">{{selectedLang.translate.contact.details.location}}</p>
+                          <p class="content mb-0" *ngFor="let location of selectedLang.translate.contact.details.value.location">
                             {{location}}
-                          </h5>
+                          </p>
                           <br />
-                          <h4>{{selectedLang.translate.contact.details.businessHours}}</h4>
-                          <h5 *ngFor="let businessHour of selectedLang.translate.contact.details.value.businessHours">
-                            {{businessHour}}</h5>
+                          <p class="header">{{selectedLang.translate.contact.details.businessHours}}</p>
+                          <p class="content" *ngFor="let businessHour of selectedLang.translate.contact.details.value.businessHours">
+                            {{businessHour}}</p>
                         </div>
                       </div>
                     </div>
