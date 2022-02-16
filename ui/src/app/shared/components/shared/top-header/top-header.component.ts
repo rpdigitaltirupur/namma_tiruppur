@@ -63,12 +63,12 @@ export class TopHeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   async getClimateResponse() {
-    /*this.httpService
+    this.httpService
       .getWithoutParams(environment.weatherApi + this.selectedLang.langUri)
       .subscribe((data: IClimateResponse) => {
         this.climateResponse = <IClimateResponse>data;
         this.processClimateResponse();
-      });*/
+      });
   }
 
   ngAfterViewInit(): void {
@@ -150,12 +150,10 @@ export class TopHeaderComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   getServerStatus() {
-    /*this.httpService
-      .get('http://localhost:8080' + RouterConstant.STATUS)
-      .subscribe((data: any) => {
-        if (data && data.status === 'UP') {
-          this.status = true;
-        }
-      });*/
+    this.httpService.get(RouterConstant.STATUS).subscribe((data: any) => {
+      if (data && data.status === 'UP') {
+        this.status = true;
+      }
+    });
   }
 }
